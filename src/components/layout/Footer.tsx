@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import logoImage from '@/assets/logo.png';
+import founderhuntBadge from '@/assets/founderhunt-badge.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -113,18 +114,32 @@ const Footer = () => {
             <p className="text-background/60 text-sm">
               © {currentYear} LOCAL X. All rights reserved.
             </p>
-            <p className="text-background/60 text-sm text-center">
-              This MVP was developed by{' '}
+            <div className="flex flex-col items-center gap-3">
               <a
                 href="https://founderhuntai.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
+                className="hover:opacity-80 transition-opacity"
               >
-                FounderHunt AI
-              </a>{' '}
-              — Turning startup ideas into MVPs
-            </p>
+                <img 
+                  src={founderhuntBadge} 
+                  alt="Find us on Founder Hunt" 
+                  className="h-10 w-auto"
+                />
+              </a>
+              <p className="text-background/60 text-sm text-center">
+                This MVP was developed by{' '}
+                <a
+                  href="https://founderhuntai.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-medium"
+                >
+                  FounderHunt AI
+                </a>{' '}
+                — Turning startup ideas into MVPs
+              </p>
+            </div>
           </div>
         </div>
       </div>
