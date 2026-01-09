@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, User, LogOut } from 'lucide-react';
+import logoImage from '@/assets/logo.png';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import {
@@ -39,11 +40,8 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">X</span>
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">LOCAL X</span>
+          <Link to="/" className="flex items-center">
+            <img src={logoImage} alt="LOCAL X" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
