@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
+import logoImage from '@/assets/logo.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -38,11 +39,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">X</span>
-              </div>
-              <span className="font-display font-bold text-xl">LOCAL X</span>
+            <Link to="/" className="flex items-center mb-4">
+              <img src={logoImage} alt="LOCAL X" className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="text-background/70 text-sm mb-6 max-w-sm">
               Your trusted local service marketplace. Book verified professionals for all your home and personal service needs.
