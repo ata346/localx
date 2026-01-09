@@ -114,18 +114,6 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-6">
             {/* FounderHunt AI Branding */}
             <div className="flex flex-col items-center gap-4">
-              <a
-                href="https://founderhuntai.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
-              >
-                <img 
-                  src={founderhuntBadge} 
-                  alt="Find us on Founder Hunt" 
-                  className="h-10 w-auto"
-                />
-              </a>
               <div className="flex items-center gap-3">
                 <a
                   href="https://founderhuntai.vercel.app/"
