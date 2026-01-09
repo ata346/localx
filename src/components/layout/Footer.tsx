@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import logoImage from '@/assets/logo.png';
 import founderhuntBadge from '@/assets/founderhunt-badge.png';
+import founderhuntLogo from '@/assets/founderhunt-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -110,11 +111,9 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-background/20 mt-10 pt-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-background/60 text-sm">
-              © {currentYear} LOCAL X. All rights reserved.
-            </p>
-            <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-6">
+            {/* FounderHunt AI Branding */}
+            <div className="flex flex-col items-center gap-4">
               <a
                 href="https://founderhuntai.vercel.app/"
                 target="_blank"
@@ -127,19 +126,37 @@ const Footer = () => {
                   className="h-10 w-auto"
                 />
               </a>
-              <p className="text-background/60 text-sm text-center">
-                This MVP was developed by{' '}
+              <div className="flex items-center gap-3">
                 <a
                   href="https://founderhuntai.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium"
+                  className="hover:opacity-80 transition-opacity"
                 >
-                  FounderHunt AI
-                </a>{' '}
-                — Turning startup ideas into MVPs
-              </p>
+                  <img 
+                    src={founderhuntLogo} 
+                    alt="FounderHunt AI" 
+                    className="h-8 w-auto"
+                  />
+                </a>
+                <p className="text-background/70 text-sm">
+                  This MVP was developed by{' '}
+                  <a
+                    href="https://founderhuntai.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    FounderHunt AI
+                  </a>{' '}
+                  — Turning startup ideas into MVPs
+                </p>
+              </div>
             </div>
+            {/* Copyright */}
+            <p className="text-background/60 text-sm">
+              © {currentYear} LOCAL X. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
